@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile soon</title>
+    
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:title" content="My profile page">
+    <meta property="og:site_name" content="DS Profile page">
+    <meta property="og:description" content="©2024 All rights reserved - x5dfg">
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/1161701855538188348/713d1133d81ce619c6f8442bd5b86065.png?size=1024">
+    <meta property="og:url" content="https://x5dfg.github.io/x5dfg_bio/">
+    
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/1161701855538188348/713d1133d81ce619c6f8442bd5b86065.png?size=1024">
+    <script rel="preconnect" src="./static/js/opacity.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom,#000000, #0d0d0f, #14101d, #0c0044) ;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        header {
+            background: gold;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+            box-shadow: 0 -200px 100px -120px crimson inset;
+            animation: background 3s infinite alternate;
+        }
+
+        @keyframes background {
+            50% {
+                background: crimson;
+                box-shadow: 0 -200px 100px -100px gold inset;
+            }
+        }
+
+        h1 {
+            font-family: Arial Black, sans-serif;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: #d8fdff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover, a:active {
+            color: #747474;
+        }
+
+        .portfolio-item {
+            border-bottom: 1px solid #444;
+            padding: 20px 0;
+        }
+
+        .portfolio-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Form styles */
+        #contact-form {
+            margin-top: 30px;
+        }
+
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
+            font-family: Arial, sans-serif;
+            background-color: transparent;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            resize: none;
+            outline: 1px solid #272727;
+            color: #4e4eff;
+            border: none;
+            transition: 0.5s all;
+        }
+
+        #contact-form input[type="text"]:focus,
+        #contact-form input[type="email"]:focus,
+        #contact-form textarea:focus {
+            background-color: #4b4be048;
+            color: #dbdbff;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            resize: none;
+            outline: 1px solid #0f0f8d;
+            border: none;
+        }
+
+        #contact-form input[type="text"]:hover,
+        #contact-form input[type="email"]:hover,
+        #contact-form textarea:hover {
+            background-color: #ffffff15;
+            transform: scale(1.011);
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            resize: none;
+            border: none;
+        }
+
+        #contact-form button {
+            padding: 10px 20px;
+            background-color: #ec8a04;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            box-shadow: 0px 0px 0px 0px #ffffff;
+            transition: 0.5s all;
+        }
+
+        #contact-form button:hover {
+            transform: scale(1.05);
+            background-color: #ec8a04;
+            box-shadow: 0px 10px 50px 3px #ffffff;
+            animation: button_shadow_anim 0.2s infinite linear;
+            
+        }
+
+        @keyframes button_shadow_anim {
+            0% { box-shadow: -10px 10px 50px 3px #fcda1a; background-color: #fcda1a; color: #ffffff;}
+            25% { box-shadow: 10px 10px 50px 3px #ffe985; background-color: #ffe985; color: #ffa861;}
+            50% { box-shadow: 10px -10px 50px 3px #ffffff; background-color: #ffffff; color: #fcda1a;}
+            75% { box-shadow: -10px -10px 50px 3px #ffa861; background-color: #ffa861; color: #ffe985;}
+            100% { box-shadow: -10px 10px 50px 3px #ffa51e; background-color: #ffa51e; color: #ffffff;}
+        }
+
+        #contact-form button:focus {
+            transform: scale(0.90);
+            background-color: #ec4d04;
+            
+        }
+
+
+        #links {
+            text-align: center;
+            justify-items: center;
+        }
+
+        #links a {
+            border-radius: 4px;
+            border: 2px solid #3a0eff;
+            font-size: 20px;
+            padding: 4px;
+            margin: 0px 20px;
+            color: #3a0eff;
+            transition: 0.5 all ease-in-out;
+        }
+
+        #links a:hover {
+            margin: 0px 20px;
+            border: 2px solid #2d178d;
+            color: #2d178d;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        ::selection {
+            background: #0066ff3a;
+        }
+
+        .ds_links {
+            background-color: #525252; 
+            color: #dddddd;
+            padding: 6px 8px; 
+            border-radius: 3px;
+            transition: all 0.2s ease-in-out;
+        }
+        .ds_links:hover {
+            background-color: #7a7a7a; 
+            color: #ffffff;
+            padding: 6px 8px; 
+            border-radius: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>-_-</h1>
+        <h1 style="font-size: larger;">x5dfg_dscdev</h1>
+    </header>
+    <div class="container">
+        <section id="resume">
+            <h2>Краткое инфо:</h2>  
+            <p><b>x5dfg / DSC</b> - Python, Frontend разработчик с 2024 г.</p>
+            <p>Люблю игры про автоматизацию и механику - <b>Scrap Mechanic, Astroneer, Mindustry, The Long Drive</b> и др.</p>
+            <p>Любимая музыка из игр: <b>DMC5, Ultrakill, Doom</b></p>
+            <p>Я имею несколько проектов в <a href="#portfolio">портфолио</a>, как публичных, так и приватных.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Портфолио:</h2>
+            <div class="portfolio-item">
+                <h3>DSC8</h3>
+                <p><b>DSC8</b> - <b>Утилита и развлечение</b> для вашего дискорд сервера с возможностями которых нет в обычном клиенте дискорд.</p>
+                <p>Переименовывание ников, ролей, каналов всего сервера... <b>Данные о погоде; Планировка сообщений; Модальные окна; Запрет срать в чате; Прокачанный <i>/clear</i> ?!</b></p>
+                <p>- И Ядерка, и многое другое в моем боте!</p>
+                <p>
+                    <a class="ds_links" target="_blank" href="https://discord.com/oauth2/authorize?client_id=1133772885383725117&permissions=10294973688913&scope=bot">Добавить на сервер 🔗</a>
+                    <a class="ds_links" target="_blank" href="https://discord.com/invite/f5RErQHhzQ">Официальный сервер 🛠️</a>
+                </p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Контактная форма:</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Ваше имя или псевдоним" required>
+                <input type="email" placeholder="Ваш email" required>
+                <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+        <footer id="links">
+            <span><a target="_blank" href="https://dsc8-dev.site/">Website</a></span>
+            <span><a target="_blank" href="https://github.com/x5dfg">GitHub</a></span>
+            <span><a target="_blank" href="https://discord.com/invite/f5RErQHhzQ">Discord</a></span>
+            <span><a href="#top">To top</a></span>
+        </footer>
+    </div>
+
+    <script>
+        // Simple form validation
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = contactForm.querySelector('input[type="text"]').value;
+            const email = contactForm.querySelector('input[type="email"]').value;
+            const message = contactForm.querySelector('textarea').value;
+    
+            if (name && email && message) {
+                // Read the webhook URL from the webhook.json file
+                fetch('./static/json/webhook.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const webhookUrl = data.webhookUrl;
+    
+                        // Send the form data to the Discord webhook
+                        fetch(webhookUrl, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                type: 1,
+                                username: name,
+                                avatar: `https://cdn.discordapp.com/avatars/1161701855538188348/713d1133d81ce619c6f8442bd5b86065.png?size=1024`,
+                                content: `### <@887724227871014912> Поступили данные с контактной формы!\n**Почта:** \n${email}\n**Message:**\n${message}`
+                            })
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                alert(`${name}, сообщение успешно отправлено.\nЯ обязательно отвечу на ваше сообщение в указанной почте.`);
+                                contactForm.reset();
+                            } else {
+                                throw new Error('Ошибка при отправлении сообщения вебхуком :/');
+                            }
+                        })
+                        .catch(error => {
+                            console.error(error);
+                            alert('Ошибка при отправлении сообщения. Пожалуйста, попробуйте позже.');
+                        });
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        alert('Ошибка при чтении файла webhook.json.');
+                    });
+            } else {
+                alert('Пожалуйста, заполните все поля формы.');
+            }
+        });
+    </script>
+</body>
+</html>
