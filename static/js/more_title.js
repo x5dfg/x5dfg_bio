@@ -1,7 +1,17 @@
 let titleIndex = 0;
-const titles = ['x','x5','x5d','x5df','x5dfg','5dfg','dfg','fg','g'];
+const titles = [
+  'X5DFG.PY',
+  'X5DFG.HTML',
+  'X5DFG.CSS',
+  'X5DFG.JS',
+  'X5DFG.JRE',
+  'X5DFG.CS',
+  'X5DFG.PHP',
+  'X5DFG.JSON',
+  'X5DFG.SUS'
+];
 
 setInterval(() => {
   document.title = titles[titleIndex];
   titleIndex = (titleIndex + 1) % titles.length;
-}, 500);
+}, 1000);
