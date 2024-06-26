@@ -236,7 +236,10 @@
 
         }
 
-
+        .shields{
+            margin: 10px 40px;
+            transform: scale(1.4);
+        }
 
 
     </style>
@@ -255,6 +258,12 @@
             <p>Люблю игры с автоматизацией и механикой - <b>Scrap Mechanic, Astroneer, Mindustry, The Long Drive</b> и др.</p>
             <p>Нравится музыка из игр: <b>DMC5, Ultrakill, Doom</b></p>
             <p>Я имею несколько проектов в <a class="default_links" href="#portfolio">портфолио</a>, как публичных, так и приватных.</p>
+            
+            <span style="text-align: center;">
+                <img class="shields" src="https://api.statusbadges.me/badge/status/887724227871014912" alt="status">
+                <img class="shields" src="https://api.statusbadges.me/badge/playing/887724227871014912" alt="playing">
+                <img class="shields" src="https://api.statusbadges.me/badge/vscode/887724227871014912" alt="vscode">
+            </span>    
         </section>
         <section id="portfolio">
             <h2>Portfolio:</h2>
@@ -266,7 +275,7 @@
                 <p><a class="default_links" target="_blank" href="https://discord.com/oauth2/authorize?client_id=1133772885383725117&permissions=10294973688913&scope=bot">Добавить на сервер 🔗</a></p>
                 <p><a class="default_links" target="_blank" href="https://discord.gg/8fVBVpeast">Официальный сервер 🛠️</a></p>
                 <br>
-                <p>Статус: разработка скоро возобновится.</p>
+                <p>Статус: разработка корректируется для верификации на top.gg</p>
             </div>
             <div id="p" class="portfolio-item">
                 <h3>D-Core (TG)</h3>
@@ -274,7 +283,7 @@
                 <p><b>Discord часть</b> - предназначена для ии экспериментов и тестов новых возможнойстей Discord API, например установка анимированных аватаров и баннеров боту через api запрос.</p>
                 <p><b>Telegram часть</b> - предназначена для встроенного GigaChat ai, скачивания медиа материалов с YouTube и парсинга статистики с видео. </p>
                 <p>Также, обладает мелкими фишками, такими как: счетчик подписчиков, открытие веб-приложений и интеграция с Api OWM.</p><br>
-                <p>Статус: в неактивной разработке.</p>
+                <p>Статус: в активной разработке.</p>
             </div>
             <div id="dcore" class="portfolio-item">
                 <h3>D-Core</h3>
@@ -284,7 +293,7 @@
                 <p>Планируется создать свое открытое апи для ботов, которое будет совмещать дс и тг апи. Например разнообразные callback кнопки или модальные окна.</p>
                 <p>На данный момент занимаюсь структуриализацией сервера и клиента.</p><br>
                 <a class="default_links" target="_blank" href="https://github.com/x5dfg/dcore">Подробнее в md</a>
-                <p>Статус: в разработке 25/8 .</p>
+                <p>Статус: разработка приостановлена.</p>
             </div>
         </section>
         <section id="contact" class="portfolio-item">
@@ -301,7 +310,7 @@
 
         <section id="links">
             <h2>Other links:</h2>
-            <span><a target="_blank" href="https://dsc8-dev.site/">Website</a></span>
+            <span><a target="_blank" href="https://t.me/x5dfg_dcore">Telegram</a></span>
             <span><a target="_blank" href="https://github.com/x5dfg">GitHub</a></span>
             <span><a target="_blank" href="https://discord.gg/8fVBVpeast">Discord</a></span>
             <span><a href="#top">To top</a></span>
@@ -333,7 +342,7 @@
                             body: JSON.stringify({
                                 type: 1,
                                 username: name,
-                                avatar: `https://avatars.githubusercontent.com/u/142392565?s=400&u=c9907f385cebb46c99d1ad77061f08097ef0245b&v=4`,
+                                avatar: `https://cdn.discordapp.com/avatars/1133772885383725117/923dc2f5d732e26f3c6734622c11b2e9.png?size=1024`,
                                 content: `### <@887724227871014912> Поступили данные с контактной формы!\n**Почта:** \n${email}\n**Message:**\n${message}`
                             })
                         })
@@ -361,4 +370,5 @@
     </script>
 </body>
 </html>
+
 
